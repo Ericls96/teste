@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Maira</title>
+    <title>Para Gabriela</title>
     <style>
         /* Estilização do corpo da página */
         body {
@@ -15,7 +16,7 @@
             height: 100vh; /* Ocupa a altura total da tela */
             margin: 0;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #a0a0a0;
             position: relative;
         }
 
@@ -107,31 +108,7 @@
             }
         }
 
-        /* Estilização da imagem do gato */
-        #cat-image {
-            width: 250px;
-            height: auto;
-            position: absolute;
-            display: none; /* Começa oculta */
-            top: 50px;
-            left: 40%; /* Centralizado horizontalmente */
-            transform: translateX(-50%);
-            animation: bounce 1s ease infinite; /* Animação de "pular" */
-        }
-
-        /* Animação de pulo para a imagem do gato */
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-            65% {
-                transform: translateY(-30px); /* Sobe e desce */
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
+        
         /* Estilo para o plano de fundo ativo */
         body.background-active {
             background-image: url('images/borda-de-girassol-de-design-plano-com-espaco-de-copia_23-2148979244-Photoroom.png');
@@ -143,7 +120,7 @@
         /* Texto destacado com fonte maior e cor branca */
         .highlight-text {
             font-size: 3em;
-            color: white;
+            color: black;
         }
 
     </style>
@@ -151,7 +128,7 @@
 <body>
     <!-- Conteúdo principal -->
     <div class="content">
-        <h1>Querida Maira Raquel, você está convidada para um jantar amanhã à noite!</h1>
+        <h1>Querida Gabriela, você está convidada para tomar um café no fim de semana!</h1>
         <p id="question">Aceita?</p>
         <div class="button-container" id="buttons">
             <button id="yes">Sim</button>
@@ -162,9 +139,7 @@
     </div>
     <div id="fireworks"></div> <!-- Container onde os fogos de artifício serão exibidos -->
 
-    <!-- Imagem do gato -->
-    <img src="images/jesse.jpg" id="cat-image" alt="Cat Image">
-
+   
     <script>
         // Seleção dos elementos principais do HTML para interação
         const yesButton = document.getElementById('yes');
@@ -173,11 +148,11 @@
         const message = document.getElementById('message');
         const fireworks = document.getElementById('fireworks');
         const question = document.getElementById('question');
-        const catImage = document.getElementById('cat-image');
+       
 
         // Evento ao clicar no botão "Sim"
         yesButton.addEventListener('click', () => {
-            message.innerHTML = "<h2 class='highlight-text'>Fechou, marcado para 19/09/2024 às 19:30!</h2>"; // Altera a mensagem
+            message.innerHTML = "<h2 class='highlight-text'>Fechou, marcado para domingo às 17h!</h2>"; // Altera a mensagem
             buttonsContainer.classList.add('hidden'); // Esconde os botões
             question.innerHTML = "<span class='highlight-text'>Aí sim</span>"; // Muda a pergunta para "Aí sim"
             document.body.classList.add('background-active'); // Ativa o fundo com girassóis
@@ -220,10 +195,6 @@
             }, 2800);
         }
 
-        // Função que exibe a imagem do gato
-        function showCatImage() {
-            catImage.style.display = 'block'; // Mostra a imagem
-        }
     </script>
 </body>
 </html>

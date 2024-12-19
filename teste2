@@ -1,37 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Interativo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 20%;
-        }
-        button {
-            font-size: 20px;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Hello World</title>
 </head>
 <body>
-    <h1>Você aceita?</h1>
-    <button id="yes">Sim</button>
-    <button id="no">Não</button>
-    <p id="message"></p>
-
-    <script>
-        document.getElementById('yes').addEventListener('click', () => {
-            document.getElementById('message').textContent = 'Ótimo! Está marcado!';
-        });
-
-        document.getElementById('no').addEventListener('mouseover', () => {
-            alert('Você não pode dizer não!');
-        });
-    </script>
+    <h1>Hello, World!</h1>
 </body>
 </html>

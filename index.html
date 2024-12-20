@@ -129,6 +129,8 @@
         <source src="images/musica.mp3" type="audio/mp3">
     </audio>
 
+    music.play(); // Toca a música após o clique
+
     <!-- Conteúdo principal -->
     <div class="content">
         <h1>Querida Gabriela, você está convidada para tomar um café no fim de semana!</h1>
@@ -154,7 +156,7 @@
 
         // Evento ao clicar no botão "Sim"
         yesButton.addEventListener('click', () => {
-            music.play(); // Toca a música após o clique
+            
             message.innerHTML = "<h2 class='highlight-text'>Fechou, marcado para domingo às 17h!</h2>"; // Altera a mensagem
             buttonsContainer.classList.add('hidden'); // Esconde os botões
             question.innerHTML = "<span class='highlight-text'>Aí sim</span>"; // Muda a pergunta para "Aí sim"

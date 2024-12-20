@@ -153,15 +153,9 @@
         const question = document.getElementById('question');
         const music = document.getElementById('backgroundMusic'); // Referência ao áudio
 
-        // Função que toca a música automaticamente assim que a página for carregada
-        window.onload = () => {
-            music.play().catch((e) => {
-                console.log("Erro ao tentar reproduzir a música: ", e);
-            });
-        };
-
         // Evento ao clicar no botão "Sim"
         yesButton.addEventListener('click', () => {
+            music.play(); // Toca a música após o clique
             message.innerHTML = "<h2 class='highlight-text'>Fechou, marcado para domingo às 17h!</h2>"; // Altera a mensagem
             buttonsContainer.classList.add('hidden'); // Esconde os botões
             question.innerHTML = "<span class='highlight-text'>Aí sim</span>"; // Muda a pergunta para "Aí sim"
@@ -173,8 +167,8 @@
         noButton.addEventListener('mouseover', () => {
             const maxX = window.innerWidth - noButton.offsetWidth - 10; // Limita o movimento dentro da janela
             const maxY = window.innerHeight - noButton.offsetHeight - 10;
-            const moveX = Math.random() * 30 - 10; // Movimento aleatório no eixo X
-            const moveY = Math.random() * 30 - 10; // Movimento aleatório no eixo Y
+            const moveX = Math.random() * 20 - 5; // Movimento aleatório no eixo X
+            const moveY = Math.random() * 20 - 5; // Movimento aleatório no eixo Y
 
             const newX = Math.max(0, Math.min(noButton.offsetLeft + moveX, maxX)); // Calcula a nova posição X
             const newY = Math.max(0, Math.min(noButton.offsetTop + moveY, maxY));  // Calcula a nova posição Y

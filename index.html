@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -108,7 +107,6 @@
             }
         }
 
-        
         /* Estilo para o plano de fundo ativo */
         body.background-active {
             background-image: url('images/borda-de-girassol-de-design-plano-com-espaco-de-copia_23-2148979244-Photoroom.png');
@@ -126,6 +124,12 @@
     </style>
 </head>
 <body>
+    <!-- Elemento de música de fundo -->
+    <audio autoplay loop>
+        <source src="sua-musica.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
     <!-- Conteúdo principal -->
     <div class="content">
         <h1>Querida Gabriela, você está convidada para tomar um café no fim de semana!</h1>
@@ -139,7 +143,6 @@
     </div>
     <div id="fireworks"></div> <!-- Container onde os fogos de artifício serão exibidos -->
 
-   
     <script>
         // Seleção dos elementos principais do HTML para interação
         const yesButton = document.getElementById('yes');
@@ -148,7 +151,6 @@
         const message = document.getElementById('message');
         const fireworks = document.getElementById('fireworks');
         const question = document.getElementById('question');
-       
 
         // Evento ao clicar no botão "Sim"
         yesButton.addEventListener('click', () => {
@@ -194,7 +196,6 @@
                 showCatImage(); // Mostra a imagem do gato
             }, 2800);
         }
-
     </script>
 </body>
 </html>

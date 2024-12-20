@@ -126,8 +126,7 @@
 <body>
     <!-- Elemento de música de fundo -->
     <audio autoplay loop>
-        <source src="sua-musica.mp3" type="audio/mp3">
-        Seu navegador não suporta o elemento de áudio.
+        <source src="images/musica.mp3" type="audio/mp3">
     </audio>
 
     <!-- Conteúdo principal -->
@@ -165,8 +164,8 @@
         noButton.addEventListener('mouseover', () => {
             const maxX = window.innerWidth - noButton.offsetWidth - 10; // Limita o movimento dentro da janela
             const maxY = window.innerHeight - noButton.offsetHeight - 10;
-            const moveX = Math.random() * 100 - 50; // Movimento aleatório no eixo X
-            const moveY = Math.random() * 100 - 50; // Movimento aleatório no eixo Y
+            const moveX = Math.random() * 70 - 30; // Movimento aleatório no eixo X
+            const moveY = Math.random() * 70 - 30; // Movimento aleatório no eixo Y
 
             const newX = Math.max(0, Math.min(noButton.offsetLeft + moveX, maxX)); // Calcula a nova posição X
             const newY = Math.max(0, Math.min(noButton.offsetTop + moveY, maxY));  // Calcula a nova posição Y

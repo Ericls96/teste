@@ -107,7 +107,6 @@
             }
         }
 
-        
         /* Estilo para o plano de fundo ativo */
         body.background-active {
             background-image: url('images/borda-de-girassol-de-design-plano-com-espaco-de-copia_23-2148979244-Photoroom.png');
@@ -125,8 +124,8 @@
     </style>
 </head>
 <body>
-    <!-- Reproduz a música de fundo -->
-    <audio id="backgroundMusic" autoplay loop>
+    <!-- Adicionar a tag de áudio aqui -->
+    <audio id="backgroundMusic" loop>
         <source src="images/musica.mp3" type="audio/mp3">
     </audio>
 
@@ -151,9 +150,11 @@
         const message = document.getElementById('message');
         const fireworks = document.getElementById('fireworks');
         const question = document.getElementById('question');
-       
+        const music = document.getElementById('backgroundMusic'); // Referência ao áudio
+
         // Evento ao clicar no botão "Sim"
         yesButton.addEventListener('click', () => {
+            music.play(); // Toca a música após o clique
             message.innerHTML = "<h2 class='highlight-text'>Fechou, marcado para domingo às 17h!</h2>"; // Altera a mensagem
             buttonsContainer.classList.add('hidden'); // Esconde os botões
             question.innerHTML = "<span class='highlight-text'>Aí sim</span>"; // Muda a pergunta para "Aí sim"
@@ -165,8 +166,8 @@
         noButton.addEventListener('mouseover', () => {
             const maxX = window.innerWidth - noButton.offsetWidth - 10; // Limita o movimento dentro da janela
             const maxY = window.innerHeight - noButton.offsetHeight - 10;
-            const moveX = Math.random() * 100 - 50; // Movimento aleatório no eixo X
-            const moveY = Math.random() * 100 - 50; // Movimento aleatório no eixo Y
+            const moveX = Math.random() * 30 - 10; // Movimento aleatório no eixo X
+            const moveY = Math.random() * 30 - 10; // Movimento aleatório no eixo Y
 
             const newX = Math.max(0, Math.min(noButton.offsetLeft + moveX, maxX)); // Calcula a nova posição X
             const newY = Math.max(0, Math.min(noButton.offsetTop + moveY, maxY));  // Calcula a nova posição Y
@@ -196,6 +197,7 @@
                 showCatImage(); // Mostra a imagem do gato
             }, 2800);
         }
+
     </script>
 </body>
 </html>

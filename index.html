@@ -107,6 +107,7 @@
             }
         }
 
+        
         /* Estilo para o plano de fundo ativo */
         body.background-active {
             background-image: url('images/borda-de-girassol-de-design-plano-com-espaco-de-copia_23-2148979244-Photoroom.png');
@@ -124,8 +125,8 @@
     </style>
 </head>
 <body>
-    <!-- Elemento de música de fundo -->
-    <audio autoplay loop>
+    <!-- Reproduz a música de fundo -->
+    <audio id="backgroundMusic" autoplay loop>
         <source src="images/musica.mp3" type="audio/mp3">
     </audio>
 
@@ -150,7 +151,7 @@
         const message = document.getElementById('message');
         const fireworks = document.getElementById('fireworks');
         const question = document.getElementById('question');
-
+       
         // Evento ao clicar no botão "Sim"
         yesButton.addEventListener('click', () => {
             message.innerHTML = "<h2 class='highlight-text'>Fechou, marcado para domingo às 17h!</h2>"; // Altera a mensagem
@@ -164,8 +165,8 @@
         noButton.addEventListener('mouseover', () => {
             const maxX = window.innerWidth - noButton.offsetWidth - 10; // Limita o movimento dentro da janela
             const maxY = window.innerHeight - noButton.offsetHeight - 10;
-            const moveX = Math.random() * 70 - 30; // Movimento aleatório no eixo X
-            const moveY = Math.random() * 70 - 30; // Movimento aleatório no eixo Y
+            const moveX = Math.random() * 100 - 50; // Movimento aleatório no eixo X
+            const moveY = Math.random() * 100 - 50; // Movimento aleatório no eixo Y
 
             const newX = Math.max(0, Math.min(noButton.offsetLeft + moveX, maxX)); // Calcula a nova posição X
             const newY = Math.max(0, Math.min(noButton.offsetTop + moveY, maxY));  // Calcula a nova posição Y
